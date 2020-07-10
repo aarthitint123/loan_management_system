@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head><title>Registration Form</title>
+
+
+<!-----google font--->
+  <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+
+<!----Bootstrap CDN---->
+<!-- Latest compiled and minified CSS -->
+<!-- jQuery library -->
+<!-- Latest compiled JavaScript -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-------internal css------------------->
+
+
+    <style>
+
+        .input[type=text]:focus, input[type=password]:focus
+         {
+
+  outline-style: double;color:black;font-family: verdana;
+}
+.input[type=text], input[type=dropdown] , input[type=text],city
+{
+
+ width: 35%;
+ padding: 7px;
+ margin-left:25%;
+ border-collapse: collapse;
+ border-radius: 10px;
+  }
+  .mform{
+   border:1px solid black;
+   margin-left: 300px;
+   margin-right: 350px;
+   margin-top: 150px;
+   box-shadow:20px 20px 10px grey;
+
+
+   /*transparent effect*/
+   background-color:  #ffff;
+    opacity: .8;
+  }
+
+  .box{
+  margin-left: 35px;
+font-family: 'Alata', sans-serif;
+
+  }
+
+
+   .submit{
+     margin-left: 250px;
+     font-family: 'Alata', sans-serif;
+
+   }
+
+body {
+  background-image: url('banking_reg_form.jpg');
+}
+
+  </style>
+</head>
+<body class="container-fluid">
+<div class="container-fluid">
+<form class="mform">
+
+    <div class="box"><h1 class="heading">Application Form</h1></div><br><br>
+
+    <div class="box"><b><u>Personal Information</u></b></div><br><br>
+<!-----------firstname--------------------->
+<div class="box">
+<label for="firstname">First Name(same as id.proof)*</label><br>
+</div>
+    <input type="text" name="firstname" placeholder="Firstname" id="firstname" autocomplete="off" ><br><br>
+<!-------------lastname------------------->
+<div class="box">
+<label for="lastname">Last Name</label><br>
+</div>
+<input type="text" name="lastname" placeholder="Lastname" id="lastname" autocomplete="off" ><br><br>
+<!-------------fatheror guardian------------------->
+<div class="box">
+<label for="pname">Parent/Guardian Name*</label><br>
+</div>
+<input type="text" name="pname" placeholder="Parent/Guardian name" id="pname" autocomplete="off" ><br><br>
+    <!----------- gender----------------->
+   <div class="box">
+<label for="gender">Gender</label><br>
+<input type="radio" name="gender" value="Male" checked>Male<br>
+<input type="radio" name="gender" value="Female">Female<br>
+<input type="radio" name="gender" value="Others">Others<br><br>
+</div>
+
+    <!----------------marital status----->
+    <div class="box">
+<label for="ms">Marital Status</label><br>
+<input type="radio" name="ms" value="Married" checked>Married<br>
+
+<input type="radio" name="ms" value="Unmarried">Unmarried<br><br>
+</div>
+
+<!------------email---------------->
+<div class="box">
+<label for="email">Email*</label>
+</div>
+<input type="text" name="email" placeholder="eg:john@gmail.com" id="email" autocomplete="off"><br><br>
+
+<!---------------city---------------->
+    <div class="box"><b>Residence City</b></div> <span style="padding-left:195px"/></label>
+    <select class="city" name="location" value="" style="width:230" >
+<option selected="selected">-Select-</option>
+<option disabled="disabled"><font color="#000000"><i>-Top Metropolitan Cities-</i></font></option>
+<option>Ahmedabad</option>
+<option>Bengaluru/Bangalore</option>
+<option>Chandigarh</option>
+<option>Chennai</option>
+<option>Delhi</option>
+<option>Gurgaon</option>
+<option>Hyderabad/Secunderabad</option>
+<option>Kolkatta</option>
+<option>Mumbai</option>
+<option>Noida</option>
+<option>Pune</option>
+<option >Andhra Pradesh</option>
+<option>Anantapur</option>
+<option>Guntakal</option>
+<option>Guntur</option>
+<option>Hyderabad/Secunderabad</option>
+<option>kakinada</option>
+<option>kurnool</option>
+<option>Nellore</option>
+<option>Nizamabad</option>
+<option>Rajahmundry</option>
+<option>Tirupati</option>
+<option>Vijayawada</option>
+<option>Visakhapatnam</option>
+<option>Warangal</option>
+<option>Andra Pradesh-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Arunachal Pradesh-</i></font></option>
+<option>Itanagar</option>
+<option>Arunachal Pradesh-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Assam-</i></font></option>
+<option>Guwahati</option>
+<option>Silchar</option>
+<option>Assam-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Bihar-</i></font></option>
+<option>Bhagalpur</option>
+<option>Patna</option>
+<option>Bihar-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Chhattisgarh-</i></font></option>
+<option>Bhillai</option>
+<option>Bilaspur</option>
+<option>Raipur</option>
+<option>Chhattisgarh-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Goa-</i></font></option>
+<option>Panjim/Panaji</option>
+<option>Vasco Da Gama</option>
+<option>Goa-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Gujarat-</i></font></option>
+<option>Ahmedabad</option>
+<option>Anand</option>
+<option>Ankleshwar</option>
+<option>Bharuch</option>
+<option>Bhavnagar</option>
+<option>Bhuj</option>
+<option>Gandhinagar</option>
+<option>Gir</option>
+<option>Jamnagar</option>
+<option>Kandla</option>
+<option>Porbandar</option>
+<option>Rajkot</option>
+<option>Surat</option>
+<option>Vadodara/Baroda</option>
+<option>Valsad</option>
+<option>Vapi</option>
+<option>Gujarat-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Haryana-</i></font></option>
+<option>Ambala</option>
+<option>Chandigarh</option>
+<option>Faridabad</option>
+<option>Gurgaon</option>
+<option>Hisar</option>
+<option>Karnal</option>
+<option>Kurukshetra</option>
+<option>Panipat</option>
+<option>Rohtak</option>
+<option>Haryana-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Himachal Pradesh-</i></font></option>
+<option>Dalhousie</option>
+<option>Dharmasala</option>
+<option>Kulu/Manali</option>
+<option>Shimla</option>
+<option>Himachal Pradesh-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Jammu and Kashmir-</i></font></option>
+<option>Jammu</option>
+<option>Srinagar</option>
+<option>Jammu and Kashmir-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Jharkhand-</i></font></option>
+<option>Bokaro</option>
+<option>Dhanbad</option>
+<option>Jamshedpur</option>
+<option>Ranchi</option>
+<option>Jharkhand-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Karnataka-</i></font></option>
+<option>Bengaluru/Bangalore</option>
+<option>Belgaum</option>
+<option>Bellary</option>
+<option>Bidar</option>
+<option>Dharwad</option>
+<option>Gulbarga</option>
+<option>Hubli</option>
+<option>Kolar</option>
+<option>Mangalore</option>
+<option>Mysoru/Mysore</option>
+<option>Karnataka-Other</option>
+<option>Kerala</option>
+<option>Calicut</option>
+<option>Cochin</option>
+<option>Ernakulam</option>
+<option>Kannur</option>
+<option>Kochi</option>
+<option>Kollam</option>
+<option>Kottayam</option>
+<option>Kozhikode</option>
+<option>Palakkad</option>
+<option>Palghat</option>
+<option>Thrissur</option>
+<option>Trivandrum</option>
+<option>Kerela-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Madhya Pradesh-</i></font></option>
+<option>Bhopal</option>
+<option>Gwalior</option>
+<option>Indore</option>
+<option>Jabalpur</option>
+<option>Ujjain</option>
+<option>Madhya Pradesh-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Maharashtra-</i></font></option>
+<option>Ahmednagar</option>
+<option>Aurangabad</option>
+<option>Jalgaon</option>
+<option>Kolhapur</option>
+<option>Mumbai</option>
+<option>Mumbai Suburbs</option>
+<option>Nagpur</option>
+<option>Nasik</option>
+<option>Navi Mumbai</option>
+<option>Pune</option>
+<option>Solapur</option>
+<option>Maharashtra-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Manipur-</i></font></option>
+<option>Imphal</option>
+<option>Manipur-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Meghalaya-</i></font></option>
+<option>Shillong</option>
+<option>Meghalaya-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Mizoram-</i></font></option>
+<option>Aizawal</option>
+<option>Mizoram-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Nagaland-</i></font></option>
+<option>Dimapur</option>
+<option>Nagaland-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Orissa-</i></font></option>
+<option>Bhubaneshwar</option>
+<option>Cuttak</option>
+<option>Paradeep</option>
+<option>Puri</option>
+<option>Rourkela</option>
+<option>Orissa-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Punjab-</i></font></option>
+<option>Amritsar</option>
+<option>Bathinda</option>
+<option>Chandigarh</option>
+<option>Jalandhar</option>
+<option>Ludhiana</option>
+<option>Mohali</option>
+<option>Pathankot</option>
+<option>Patiala</option>
+<option>Punjab-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Rajasthan-</i></font></option>
+<option>Ajmer</option>
+<option>Jaipur</option>
+<option>Jaisalmer</option>
+<option>Jodhpur</option>
+<option>Kota</option>
+<option>Udaipur</option>
+<option>Rajasthan-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Sikkim-</i></font></option>
+<option>Gangtok</option>
+<option>Sikkim-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Tamil Nadu-</i></font></option>
+<option>Chennai</option>
+<option>Coimbatore</option>
+<option>Cuddalore</option>
+<option>Erode</option>
+<option>Hosur</option>
+<option>Madurai</option>
+<option>Nagerkoil</option>
+<option>Ooty</option>
+<option>Salem</option>
+<option>Thanjavur</option>
+<option>Tirunalveli</option>
+<option>Trichy</option>
+<option>Tuticorin</option>
+<option>Vellore</option>
+<option>Tamil Nadu-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Tripura-</i></font></option>
+<option>Agartala</option>
+<option>Tripura-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Union Territories-</i></font></option>
+<option>Chandigarh</option>
+<option>Dadra & Nagar Haveli-Silvassa</option>
+<option>Daman & Diu</option>
+<option>Delhi</option>
+<option>Pondichery</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Uttar Pradesh-</i></font></option>
+<option>Agra</option>
+<option>Aligarh</option>
+<option>Allahabad</option>
+<option>Bareilly</option>
+<option>Faizabad</option>
+<option>Ghaziabad</option>
+<option>Gorakhpur</option>
+<option>Kanpur</option>
+<option>Lucknow</option>
+<option>Mathura</option>
+<option>Meerut</option>
+<option>Moradabad</option>
+<option>Noida</option>
+<option>Varanasi/Banaras</option>
+<option>Uttar Pradesh-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Uttaranchal-</i></font></option>
+<option>Dehradun</option>
+<option>Roorkee</option>
+<option>Uttaranchal-Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-West Bengal-</i></font></option>
+<option>Asansol</option>
+<option>Durgapur</option>
+<option>Haldia</option>
+<option>Kharagpur</option>
+<option>Kolkatta</option>
+<option>Siliguri</option>
+<option>West Bengal - Other</option>
+<option disabled="disabled" style="background-color:#3E3E3E"><font color="#FFFFFF"><i>-Other-</i></font></option>
+<option>Other</option>
+</select>
+
+<br><br>
+
+<!-----------phone----------------->
+<div class="box">
+<label for="phone">Mobile Number*</label><br>
+</div>
+<input type="text" name="phone" placeholder="9999988888" id="phone" autocomplete="off"><br><br>
+
+<!-----------DOB----------------->
+<div class="box">
+<label for="DOB">DOB</label><br>
+</div>
+<input type="text" name="DOB" placeholder="15/12/1999" id="DOB" autocomplete="off"><br><br>
+
+    <div class="box"><b><u>Account Information</u></b></div><br><br>
+    <!----------------------name of bank=----------------->
+    <div class="box">
+<label for="bankname">Name of the bank*</label><br>
+</div>
+<input type="text" name="bn" placeholder="Axis" id="bn" autocomplete="off"><br><br>
+<!-----------account number----------------->
+<div class="box">
+<label for="accnumber">Account Number*</label><br>
+</div>
+<input type="text" name="accnumber" placeholder="183640803809" id="account_number" autocomplete="off"><br><br>
+
+<!-----------IFSC code----------------->
+<div class="box">
+<label for="IFSC">IFSC*</label><br>
+</div>
+<input type="text" name="IFSC" placeholder="9999988888" id="IFSC" autocomplete="off"><br><br>
+
+    <div class="box"><b><u>Educational Information</u></b></div><br><br>
+
+
+<!-----------name of the institution with address----------------->
+<div class="box">
+<label for="name&address">Name of the institution with address*</label><br>
+</div>
+<input type="text" name="name&address" placeholder="LICET,loyola campus,nungambakkam" id="name&address" autocomplete="off"><br><br>
+
+
+
+<!-----------10th pass percent----------------->
+<div class="box">
+<label for="10th pass %">10th pass %*</label><br>
+</div>
+<input type="text" name="10th pass %" placeholder="99%" id="10th pass %" autocomplete="off"><br><br>
+
+<!-----------12th pass percent----------------->
+<div class="box">
+<label for="12th pass %">12th pass %*</label><br>
+</div>
+<input type="text" name="12th pass %" placeholder="92%" id="12th pass %" autocomplete="off"><br><br>
+
+
+<!--------------time of study--------------->
+<div class="box">
+<label for="time of study">Time of study*</label><br>
+<select name="dropdown">
+<option value="2017-2021" selected>2017-2021</option>
+<option value="2018-2022" selected>2018-2022</option>
+<option value="2019-2023" selected>2019-2023</option>
+<option value="2020-2024" selected>2020-2024</option>
+<option value="2021-2025" selected>2021-2025</option>><br></br>
+</select>
+</div></br>
+
+<!--------------place of study--------------->
+<div class="box">
+<label for="place of study">Place of study (* if abroad )</label><br>
+<select name="dropdown">
+
+<option value="USA" selected>USA</option>
+<option value="canada" selected>Canada</option>
+<option value="spain" selected>Spain</option>
+<option value="germany" selected>Germany</option>
+    <option value="other" selected>Others</option><br></br>
+</select>
+</div><br></br>
+
+
+<!------------loan amount----------------->
+<div class="box">
+<label for="loan amount">Loan Amount*</label><br>
+<select name="dropdown">
+<option value="5lacs-10lacs" selected>5lacs-10lacs</option>
+<option value="10lacs-15lacs" selected>10lacs-15lacs</option>
+<option value="15lacs-20lacs" selected>15lacs-20lacs</option>
+<option value="20lacs-25lacs" selected>20lacs-25lacs</option>
+<option value="25lacs-30lacs" selected>25lacs-30lacs</option>><br></br>
+</select>
+</div></br>
+
+
+<div class="box">
+    <input type="checkbox" name="pa" >
+    I authorize prospective Credit Grantors/Lending/Leasing Companies to obtain personal and credit information about me from my employer and credit bureau, or credit reporting agency, any person who has or may have any financial dealing with me, or from any references I have provided. This information, as well as that provided by me in the application, will be referred to in connection with this lease and any other relationships we may establish from time to time. Any personal and credit information obtained may be disclosed from time to time to other lenders, credit bureaus or other credit reporting agencies. * *
+</div>
+<div class="box">
+    <input type="checkbox" name="pa" >
+    I hereby agree that the information given is true, accurate and complete as of the date of this application submission. * *
+</div>
+
+
+<button type="submit" name="submit" class="submit" id="submit" style="font-size:20px;" required>Register</button>
+
+
+
+
+
+
+
+</form>
+
+</div>
+
+
+
+
+</body>
+</html>
+{% extends "base.html" %}
+
+{% block content %}
+  <form action="" method="post">
+    {% csrf_token %}
+    <table>
+    {{ form.as_table }}
+    </table>
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}

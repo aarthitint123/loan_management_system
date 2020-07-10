@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head><title>Registration Form</title>
+
+
+<!-----google font--->
+  <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+
+<!----Bootstrap CDN---->
+<!-- Latest compiled and minified CSS -->
+<!-- jQuery library -->
+<!-- Latest compiled JavaScript -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<!-------internal css------------------->
+
+
+    <style>
+
+        .input[type=text]:focus, input[type=password]:focus
+         {
+
+  outline-style: double;color:black;font-family: verdana;
+}
+.input[type=text], input[type=dropdown] , input[type=text],city
+{
+
+ width: 35%;
+ padding: 7px;
+ margin-left:25%;
+ border-collapse: collapse;
+ border-radius: 10px;
+  }
+  .mform{
+   border:1px solid black;
+   margin-left: 300px;
+   margin-right: 350px;
+   margin-top: 150px;
+   box-shadow:20px 20px 10px grey;
+
+
+   /*transparent effect*/
+   background-color:  #ffff;
+    opacity: .8;
+  }
+
+  .box{
+  margin-left: 45px;
+font-family: 'Alata', sans-serif;
+
+  }
+
+
+   .submit{
+     margin-left: 250px;
+     font-family: 'Alata', sans-serif;
+
+   }
+
+body {
+  background-image: url('banking_reg_form.jpg');
+}
+
+  </style>
+</head>
+<body class="container-fluid">
+{% load crispy_forms_tags %}
+<h1 class="box">
+    <label class="text-primary">APPLICATION FORM</label><br/>
+
+</h1>
+<form method="post" class="mform">
+
+    {%csrf_token%}
+    {{form|crispy}}
+
+  <div class="box">
+    <input type="checkbox" name="pa" required >
+    I authorize prospective Credit Grantors/Lending/Leasing Companies to obtain personal and credit information about me from my employer and credit bureau, or credit reporting agency, any person who has or may have any financial dealing with me, or from any references I have provided. This information, as well as that provided by me in the application, will be referred to in connection with this lease and any other relationships we may establish from time to time. Any personal and credit information obtained may be disclosed from time to time to other lenders, credit bureaus or other credit reporting agencies. * *
+</div>
+<div class="box">
+    <input type="checkbox" name="pa" required>
+    I hereby agree that the information given is true, accurate and complete as of the date of this application submission. * *
+</div><br>
+  <input type="submit" class="btn btn-primary"/>
+  <br><br><br>
+</form>
+<br><br><br>
+
+
+
+
+
+
+
+
+
+
+
+</form>
+
+</div>
+
+
+
+
+</body>
+</html>

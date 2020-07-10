@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Bank</title>
+  <!-----google font--->
+  <link href="https://fonts.googleapis.com/css?family=Alata&display=swap" rel="stylesheet">
+  <!-------------bootstrap CDN------------------->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
+    <!----------external css and js--------------------->
+  <style>
+
+
+
+
+      @import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
+* {
+  box-sizing: border-box;
+}
+
+header,
+section {
+  overflow-x: hidden;
+}
+
+:root {
+  --Sniglet-font: "Sniglet", cursive;
+  --Rubik: "Rubik", cursive;
+  --Patua: "Patua One", cursive;
+  --Lobster: "lobster", cursive;
+  --light-black: #2e2c2caf;
+
+  --bggradient: linear-gradient(to bottom, #66ccff 0%, #3333cc 100%);;
+  --light-gray: rgba(255, 255, 255, 0.877);
+}
+
+header a {
+  font-family: var(--Sniglet-font);
+  font-size: 0.9em;
+  color: whitesmoke;
+}
+
+.dropdown-content {
+  display: none;
+  position:z absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+header .nav-item:last-child {
+  padding-right: 10.5em;
+}
+
+header .nav-item {
+  padding: 0.9em;
+}
+
+header .navbar-brand {
+  padding-left: 8rem;
+}
+
+header .nav-link:hover {
+  color: black;
+}
+
+header .row .col-md-7 {
+  padding: 22vmin 1vmin;
+  padding-bottom: 35vmin;
+}
+
+header .row .col-md-5 {
+  padding: 4.2vmin 1vmin;
+}
+
+header .row .col-md-5 img {
+  width: 90%;
+}
+
+header {
+  background: #ff512f;
+  /* fallback for old browsers */
+  background: var(--bggradient);
+}
+
+header .container .col-md-7 {
+  font-family: "Rubik", sans-serif;
+}
+
+header .container .col-md-7 h6 {
+  padding: 1vmin;
+  letter-spacing: 4px;
+}
+
+header .container .col-md-7 h1 {
+  font-size: 8.5vmin;
+  font-weight: bold;
+  padding: 0.1em 0em;
+}
+
+header .container .col-md-7 p {
+  padding: 1vmin 5vmin;
+}
+
+.primary-btn {
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+/********** section 1 **************/
+
+.section-1 {
+  padding: 20vmin 0vmin;
+}
+
+.section-1 .row .col-md-6 .pray img {
+  opacity: 0.8;
+  width: 80%;
+  border-radius: 0.2em;
+}
+
+.section-1 .row .col-md-6:last-child {
+  position: relative;
+}
+
+.section-1 .row .col-md-6 .panel {
+  position: absolute;
+  top: 7vmin;
+  left: -18vmin;
+  background: white;
+  border-radius: 3px;
+  text-align: left;
+  padding: 13vmin 5vmin 20vmin 10vmin;
+  box-shadow: 0px 25px 42px rgba(0, 0, 0, 0.2);
+  font-family: var(--Rubik);
+  z-index: 1;
+}
+
+.section-1 .row .col-md-6 .panel h1 {
+  font-weight: bold;
+  padding: 0.4em 0;
+  font-size: 2em;
+}
+
+.section-1 .row .col-md-6 .panel p {
+  font-size: 0.9em;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/*  Section 2  */
+
+.cover {
+  width: 100%;
+  height: 20vmin;
+
+  background-position: -24rem -19rem;
+  background-size: 150%;
+  position: relative;
+}
+
+.cover .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
+.cover .content {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  padding-top: 19vmin;
+}
+
+.cover .content > h1 {
+  font-family: var(--Patua);
+  font-size: 6vmin;
+  color: whitesmoke;
+}
+
+.cover .content > p {
+  font-family: var(--Rubik);
+  font-size: 2vmin;
+  color: #e5e5e5;
+}
+
+.numbers .rect {
+  position: relative;
+  z-index: 1;
+  background: white;
+  width: 17rem;
+  height: 12rem;
+  padding-top: 3.5vmin;
+  margin: 1rem;
+  border-radius: 0.5em;
+  box-shadow: 1px 2px 50px 0px rgba(255, 0, 0, 0.349);
+}
+
+.numbers {
+  margin-top: -15vmin;
+}
+
+.numbers .rect h1 {
+  font-size: 5rem;
+  color: tomato;
+}
+
+.numbers .rect > p {
+  font-family: var(--Patua);
+}
+
+.purchase > h1 {
+  padding-top: 15vmin;
+  padding-bottom: 0.1em;
+  font-family: var(--Lobster);
+}
+
+.purchase > p {
+  color: var(--light-black);
+  font-size: 3vmin;
+  padding-bottom: 10vmin;
+}
+
+.purchase .cards .card {
+  width: 22rem;
+  margin: 3vmin 3vmin;
+}
+
+.cards div {
+  padding: 0;
+  margin: 0;
+}
+
+.cards .title {
+  background: rgba(208, 241, 241, 0.199);
+  padding: 1.4em 2.5em;
+  font-size: 2vmin;
+}
+
+.card .card-text {
+  padding: 2.5rem 3rem;
+  color: var(--light-black);
+}
+
+.card-body .pricing {
+  background: rgba(208, 241, 241, 0.199);
+  border-top-right-radius: 170px;
+  border-top-left-radius: 170px;
+}
+
+.card-body .pricing > h1 {
+  font-size: 10vmin;
+  padding: 1em 0.5em;
+}
+
+/* Section 3 */
+
+.section-3 {
+  height: 70vmin;
+  margin-top: 15vmin;
+  background: var(--bggradient);
+}
+
+.section-3 .col-md-12 > h1 {
+  padding: 2em 0 0.5em 0;
+  color: whitesmoke;
+  font-size: 6vmin;
+}
+
+.section-3 .col-md-12 > p {
+  padding: 0 4em;
+  padding-bottom: 2em;
+  color: var(--light-gray);
+  font-size: 3vmin;
+}
+
+.section-3 .desktop {
+  background: white;
+  display: inline-block;
+  border-radius: 3em;
+  padding: 2vmin 4.5vmin;
+  margin: 1em;
+}
+
+.section-3 .desktop h3 {
+  font-size: 4vmin;
+}
+
+.section-3 .desktop p {
+  font-size: 2vmin;
+}
+
+/* Section Team */
+
+.section-4 .container h1 {
+  font-size: 6vmin;
+  padding-top: 14vmin;
+}
+
+.section-4 .team {
+  padding: 10vmin 4vmin;
+}
+
+.section-4 .card {
+  width: 22em;
+  margin-top: 10vmin;
+}
+
+.section-4 .card .card-text {
+  padding: 0.5em;
+}
+
+.section-4 .card-body > a {
+  font-size: 1.5em;
+}
+
+.section-4 .carousel-item {
+  padding-left: 3rem;
+}
+
+.border-radius {
+  border-radius: 340px;
+  width: 60%;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.815);
+  overflow-x: hidden;
+  padding: 14vmin 18vmin;
+}
+
+footer p > span {
+  color: #ff512f;
+}
+
+footer input {
+  border: none !important;
+}
+
+footer input::placeholder {
+  color: white !important;
+}
+
+footer .input-group .input-group-text {
+  background: var(--bggradient);
+  border: none;
+}
+
+footer .column i {
+  color: #dd2476;
+}
+
+/* It is Adjacent sibling combinator */
+
+footer .column i + i {
+  padding: 0 0.5em;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.815);
+  z-index: 9999;
+  transition: all 1.5s ease;
+}Z
+  </style>
+</head>
+<!----------------------body section------------------------>
+<body>
+
+
+  <header>
+
+        <div class="container-fluid p-0">
+              <nav class="navbar navbar-expand-lg">
+                <!-------------------nav brand-------------cyan text-color   fa-2x-sixe of the icon -------->
+                    <a class="navbar-brand" href="#">
+
+                            <i class="fas fa-money-check-alt fa-2x mx-3"></i>
+                      Bank
+                    </a>
+                    <!--------------------collapse button when the frame is shrunk-------------------------->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"  aria-label="Toggle navigation">
+                    <i class="fas fa-align-right text-light"></i>
+            </button>
+                  <!---------------------nav bar(collaspe)----------------------------------------------------->
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                  <div class="mr-auto"></div>
+
+
+                <ul class="navbar-nav">
+
+
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="accounts/signup/">Register</a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="accounts/login/">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="accounts/logout/">Logout</a>
+                    </li>
+
+                    <h4 style="font-family: 'Alata', sans-serif ;color:black">  Welcome!! {{ user.username }}</h4>
+                </ul>
+        </div>
+
+      </nav>
+    </div>
+
+
+    <!---------------end of nav bar----------------------------------->
+    <div class="container text-center">
+            <div class="row">
+                  <div class="col-md-7 col-sm-12  text-white">
+                      <h6>Education is the key of unlocking the future!!</h6>
+                      <h1>THE LOAN MACHINE</h1>
+                      <p>
+                        </p>
+                      <button class="btn btn-primary px-5 py-2 primary-btn">
+                        Apply for Loan
+                      </button><br/><br/><br/>
+                      <button class="btn btn-primary px-5 py-2 primary-btn">
+                        Calculate Your EMI
+                      </button>
+                </div>
+                 <div class="col-md-4 col-sm-12  h-25">
+
+                     <!---------------------------------------------->
+                    <br>
+                     <br>
+                     <br>
+                     <h1 >
+                         <a href="accounts/login/" >LOGIN</a>
+                         </h1><br/>
+                        {% load crispy_forms_tags %}
+                        <form method="post" class="mform">
+                            {%csrf_token%}
+                            {{form|crispy}}
+
+
+                            <button type="submit" class="btn btn-primary px-5 py-2 primary-btn">
+                        Submit
+                      </button><br/>
+                            <br/><br>
+                            <a href="accounts/signup/" >Don't have an account!!! Sign in</a>
+
+
+                            </form>
+                     <!---------------------------------------------->
+
+        </div>
+
+
+          </div>
+    </div>
+
+  </header>
+
+
+
+
+
+  <main>
+
+
+<section>
+
+<div class="container-fluid">
+
+
+      <div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.infinityfincorp.com/images/warehouse.jpg" style="height: 250px;width: 85%;margin-left:80px">
+            <div class="carousel-caption">
+                  <h1 style=" font-family: 'Alata', sans-serif ;color:black">Your in safe hands!!!</h1>
+                  <p style=" font-family: 'Alata', sans-serif ;color:black">Education is the key of unlocking the future!!</p>
+
+            </div>
+    </div>
+
+
+    <div class="carousel-item">
+      <img src="https://www.bankofbaroda.in/writereaddata/Portal/CMS_Template_Banner/307_1_education-loan.jpg" style="height: 250px;width: 85%;margin-left:80px">
+          <div class="carousel-caption">
+                  <h1 style=" font-family: 'Alata', sans-serif;color:black">Support the need</h1>
+                  <p style=" font-family: 'Alata', sans-serif ;color:black">Everyone has the right to learn</p>
+
+            </div>
+    </div>
+
+
+
+    <div class="carousel-item">
+      <img src="https://www.admitkard.com/blog/wp-content/uploads/2017/12/Best-Places-to-Study-and-Work-for-Indian-Students-Abroad-Updated-2018-min.jpg" style="height: 250px;width: 85%;margin-left:80px">
+          <div class="carousel-caption">
+                  <h1 style=" font-family: 'Alata', sans-serif ;color:white">Together we'll go far</h1>
+                  <p style=" font-family: 'Alata', sans-serif ;color:white">Education is the key of unlocking the future!!</p>
+
+
+            </div>
+    </div>
+  </div>
+
+
+
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+    <section class="section-2 container-fluid p-0">
+      <div class="cover">
+
+        <!--------------heading------------------>
+
+          <!-------------------cards------------------>
+      <div class="container-fluid text-center">
+                <div class="numbers d-flex flex-md-row flex-wrap justify-content-center">
+                            <div class="rectd">
+                            </div>
+                            </div>
+
+                </div>
+      </div>
+
+<!------------------------------>
+
+    </section>
+
+    <!-- Section 4 -->
+    <section class="section-4" >
+      <div class="container text-center">
+        <h1 class="text-dark">3 tips for safer online banking</h1>
+
+      </div>
+      <div class="team row ">
+        <div class="col-md-4 col-12 text-center">
+            <div class="card mr-2 d-inline-block shadow-lg">
+                <div class="card-img-top">
+                  <img src="https://as1.ftcdn.net/jpg/01/64/93/80/500_F_164938001_VyPbSVQs8oBJ4dtG9yEXi84pQEo7lmk7.jpg" class="img-fluid border-radius p-4" alt="">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Authentication Factors</h3>
+                  <p class="card-text">
+                    Try to get a bank account that offers some form of two factor authentication for online banking.
+
+These days many, but not all, banks offer a small device that can be used to generate a unique code each time you log in. This code is only valid for a very short period of time and is required in addition to your login credentials in order to gain access to your online account.
+                  </p>
+                  <a href="#" class="text-secondary text-decoration-none">Be-Aware</a>
+
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4 col-12">
+            <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
+                <div class="carousel-inner text-center">
+                  <div class="carousel-item active">
+                    <div class="card mr-2 d-inline-block shadow">
+                      <div class="card-img-top">
+                        <img src="https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-fluid rounded-circle w-50 p-4" alt="">
+                      </div>
+                      <div class="card-body">
+                        <h3 class="card-title">Keep Strong Passwords</h3>
+                        <p class="card-text">
+                          When setting up online banking, if your bank asks you to provide answers to some standard security questions remember that the answer you give doesn’t have to be the real one.
+
+So you don’t have to answer “Thumper” to the name of your first pet – make it something else, as if it was a password.
+
+
+                        </p>
+                           <a href="#" class="text-secondary text-decoration-none">Be-Aware</a>
+
+
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card  d-inline-block mr-2 shadow">
+                      <div class="card-img-top">
+                        <img src="https://images.pexels.com/photos/735911/pexels-photo-735911.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-fluid rounded-circle w-50 p-4" alt="">
+                      </div>
+                      <div class="card-body">
+                        <h3 class="card-title">Keep Strong Passwords</h3>
+                        <p class="card-text">
+                          The best way to achieve this is by making it long and a mix of upper and lower case letters, numbers, and special characters.
+
+Always avoid using any common words or phrases and never create a password that contain your name, initials,
+                            or your date of birth. If your bank allows it, change your password every few months.
+
+                        </p>
+ <a href="#" class="text-secondary text-decoration-none">Be-Aware</a>
+
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+        </div>
+        <div class="col-md-4 col-12 text-center">
+            <div class="card mr-2 d-inline-block shadow-lg">
+                <div class="card-img-top">
+                  <img src="https://images.pexels.com/photos/38275/anonymous-studio-figure-photography-facial-mask-38275.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-fluid border-radius p-4" alt="">
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">Security Constraints</h3>
+                  <p class="card-text">
+                   Security software is essential these days, regardless of what you use your computer for.
+
+As a minimum, make sure you have a firewall turned on and are running antivirus software. This will ensure you are protected from Trojans,
+                      keyloggers and other forms of malware that could be used to gain access to your financial data.
+                  </p>
+ <a href="#" class="text-secondary text-decoration-none">Be-Aware</a>
+
+                </div>
+              </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+
+
+
+
+
+  <footer>
+    <div class="container-fluid p-0">
+      <div class="row text-left">
+        <div class="col-md-5 col-sm-5">
+          <h4 class="text-light">About us</h4>
+          <p class="pt-4 text-muted">Copyright ©2020 All rights reserved
+          </p>
+        </div>
+
+
+
+        <div class="col-md-2 col-sm-12">
+          <h4 class="text-light">Follow Us</h4>
+          <p class="text-muted">Let us be social</p>
+          <div class="column text-light">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script >let nCount = selector => {
+  $(selector).each(function () {
+    $(this)
+      .animate({
+        Counter: $(this).text()
+      }, {
+        // A string or number determining how long the animation will run.
+        duration: 2000,
+        // A string indicating which easing function to use for the transition.
+        easing: "swing",
+        /**
+         * A function to be called for each animated property of each animated element.
+         * This function provides an opportunity to
+         *  modify the Tween object to change the value of the property before it is set.
+         */
+        step: function (value) {
+          $(this).text(Math.ceil(value));
+        }
+      });
+  });
+};
+
+let a = 0;
+$(window).scroll(function () {
+  // The .offset() method allows us to retrieve the current position of an element  relative to the document
+  let oTop = $(".numbers").offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() >= oTop) {
+    a++;
+    nCount(".rect > h1");
+  }
+});
+
+
+
+/**
+ *
+ *  sticky navigation
+ *
+ */
+
+let navbar = $(".navbar");
+
+$(window).scroll(function () {
+  // get the complete hight of window
+  let oTop = $(".section-2").offset().top - window.innerHeight;
+  if ($(window).scrollTop() > oTop) {
+    navbar.addClass("sticky");
+  } else {
+    navbar.removeClass("sticky");
+  }
+});</script>
+</body>
+
+</html>
